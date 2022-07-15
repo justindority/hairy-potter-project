@@ -1,13 +1,14 @@
 let sell = []
 
 export const toSellOrNotToSell = (pot) => {
-    if(pot.weight >= 6 && pot.cracked !== true) {
+    if(pot.weight >= 6) {
         pot.price = 40
     }
-    if (pot.cracked !== true) {
+    if(pot.weight < 6){
         pot.price = 20
+    }
+    if (pot.cracked !== true) {
         sell.push(pot)
-        console.log(sell)
     }
     console.log(sell)
     return pot
