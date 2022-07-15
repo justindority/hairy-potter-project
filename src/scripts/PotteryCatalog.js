@@ -1,19 +1,20 @@
 let sell = []
 
-const toSellOrNotToSell = (pot) => {
+export const toSellOrNotToSell = (pot) => {
     if(pot.weight >= 6 && pot.cracked !== true) {
         pot.price = 40
-    } else if (pot.cracked !== true) {
+    }
+    if (pot.cracked !== true) {
         pot.price = 20
         sell.push(pot)
+        console.log(sell)
     }
+    console.log(sell)
     return pot
 }
 
 
-const usePottery = () => {
-    const newSell = sell.slice(0)
+export const usePottery = () => {
+    const newSell = sell.slice()
     return newSell
 }
-module.exports = { toSellOrNotToSell }
-module.exports = { usePottery }

@@ -1,6 +1,6 @@
 let primaryKey = 1
 
-const makePottery = (shape,weight,height) => {
+export const makePottery = (shape,weight,height) => {
     const pot = {
         shape: shape,
         weight: weight,
@@ -11,4 +11,3 @@ const makePottery = (shape,weight,height) => {
     return pot
 }
 
-module.exports = { makePottery }
